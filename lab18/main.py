@@ -103,4 +103,3 @@ if __name__ == "__main__":
             print(f"помилка операції: {error}")
         except Exception as error:
             print(f"несподівана помилка: {error}")
-    
