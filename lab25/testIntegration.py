@@ -1,6 +1,5 @@
 import unittest
-from integrationSystem import calculateStatusFunction, runIntegrationFunction
-
+from lab25.integrationSystem import calculateStatusFunction, runIntegrationFunction
 
 class IntegrationTestCase(unittest.TestCase):
     def testStatusFunction(self):
@@ -15,7 +14,6 @@ class IntegrationTestCase(unittest.TestCase):
         text = runIntegrationFunction()
         self.assertIn("звіт інтеграції", text)
         self.assertIn("компонентів", text)
-
 
 if __name__ == "__main__":
     unittest.main()
