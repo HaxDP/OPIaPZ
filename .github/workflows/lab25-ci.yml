@@ -1,0 +1,27 @@
+name: lab25-ci
+
+on:
+  push:
+    paths:
+      - 'lab25/**'
+      - '.github/workflows/lab25-ci.yml'
+  pull_request:
+    paths:
+      - 'lab25/**'
+      - '.github/workflows/lab25-ci.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Клонування
+        uses: actions/checkout@v4
+
+      - name: налаштування Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: запуск тестів
+        run: |
+          python -m unittest lab25/testIntegration.py -v
