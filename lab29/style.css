@@ -1,0 +1,155 @@
+* 
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #202124;
+    background: #f4f7fb;
+}
+
+.topBlock
+{
+    background: #263238;
+    padding: 18px 8%;
+}
+
+.menuBlock
+{
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.menuBlock a
+{
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+}
+
+.menuBlock a:hover,
+.activeLink
+{
+    background: #4caf50;
+}
+
+main
+{
+    width: min(1100px, 92%);
+    margin: 30px auto;
+}
+
+.heroBlock
+{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    background: white;
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.heroText
+{
+    flex: 1;
+}
+
+.heroText h1,
+.textPage h1
+{
+    font-size: 36px;
+    margin: 0 0 14px;
+}
+
+.heroText p,
+.textPage p,
+.contentBlock p
+{
+    line-height: 1.6;
+}
+
+.heroBlock img
+{
+    width: 42%;
+    min-width: 280px;
+    border-radius: 8px;
+}
+
+.buttonLink
+{
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 16px;
+    color: white;
+    background: #1976d2;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.contentBlock
+{
+    display: flex;
+    gap: 24px;
+    margin-top: 24px;
+}
+
+.contentBlock article,
+.infoBlock,
+.textPage
+{
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.contentBlock article
+{
+    flex: 2;
+}
+
+.infoBlock
+{
+    flex: 1;
+}
+
+.infoBlock a
+{
+    color: #1976d2;
+    font-weight: bold;
+}
+
+footer
+{
+    text-align: center;
+    padding: 22px;
+    color: white;
+    background: #263238;
+}
+
+@media (max-width: 760px)
+{
+    .heroBlock,
+    .contentBlock
+    {
+        flex-direction: column;
+    }
+
+    .heroBlock img
+    {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .heroText h1,
+    .textPage h1
+    {
+        font-size: 28px;
+    }
+}
